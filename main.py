@@ -1,5 +1,8 @@
 from flask import Flask, request, jsonify
 from datetime import datetime
+from redis_db import set_user_id
+from graph import graph
+from langchain_core.messages import HumanMessage, AIMessage
 
 app = Flask(__name__)
 
@@ -19,7 +22,6 @@ def chat():
                 "user_id": user_id,
             }
         }
-        insert_message_into_db(thread_id, user_id, user_input, 1 , datetime.now(), datetime.now())
         assistant_responses = []
         print("Starting graph stream processing...")
         for s in graph.stream(
@@ -30,11 +32,10 @@ def chat():
             },
             config
         ):
-            agents = ['Booking_Agent', 'Broker_Agent', 'Default_Agent', 'Profile_Agent']
+            agents = ['Resume_Agent', 'Job_Agent', 'Study_Agent', 'Default_Agent']
             for agent in agents:
                 if agent in s:
                     messages = s[agent].get('messages', [])
-                    print(f"Messages from {agent}: {messages}")  
                     for message in messages:
                         if isinstance(message, AIMessage):
                             assistant_responses.append(message.content)
@@ -61,14 +62,7 @@ def chat():
 
             assistant_responses = default_response if default_response else ["No response from Default Agent."]
 
-        combined_response = "\n".join(assistant_responses)
-        print(f"==========================================Combined response to be saved: {combined_response}==========================================")
-
-        connection = get_db_connection()
-        if connection is None:
-            print("Failed to establish a database connection.")
-            return jsonify({"error": "Database connection error."}), 500
-        save_chat_messages(thread_id, user_id, user_input, combined_response)    
+        combined_response = "\n".join(assistant_responses)  
         return jsonify({"content": combined_response})
     except Exception as e:
         return jsonify({"error": f"An error occurred: {str(e)}"}), 500

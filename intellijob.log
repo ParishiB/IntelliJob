@@ -1,0 +1,42 @@
+2025-07-15 23:04:48,745 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.1.8:8000
+2025-07-15 23:04:48,745 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-15 23:05:31,839 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-07-15 23:05:31,840 - openai._base_client - INFO - Retrying request to /chat/completions in 0.484805 seconds
+2025-07-15 23:05:32,965 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-07-15 23:05:32,965 - openai._base_client - INFO - Retrying request to /chat/completions in 0.955165 seconds
+2025-07-15 23:05:34,580 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-07-15 23:05:34,590 - werkzeug - INFO - 127.0.0.1 - - [15/Jul/2025 23:05:34] "[35m[1mPOST /chat HTTP/1.1[0m" 500 -
+2025-07-15 23:08:37,933 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-07-15 23:08:37,935 - openai._base_client - INFO - Retrying request to /chat/completions in 0.403582 seconds
+2025-07-15 23:08:38,971 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-07-15 23:08:38,971 - openai._base_client - INFO - Retrying request to /chat/completions in 0.870995 seconds
+2025-07-15 23:08:40,892 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-07-15 23:08:40,901 - werkzeug - INFO - 127.0.0.1 - - [15/Jul/2025 23:08:40] "[35m[1mPOST /chat HTTP/1.1[0m" 500 -
+2025-07-15 23:09:04,530 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-07-15 23:09:04,532 - openai._base_client - INFO - Retrying request to /chat/completions in 0.472321 seconds
+2025-07-15 23:09:05,700 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-07-15 23:09:05,701 - openai._base_client - INFO - Retrying request to /chat/completions in 0.818698 seconds
+2025-07-15 23:09:06,837 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-07-15 23:09:06,840 - werkzeug - INFO - 127.0.0.1 - - [15/Jul/2025 23:09:06] "[35m[1mPOST /chat HTTP/1.1[0m" 500 -
+2025-07-15 23:19:03,931 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-07-15 23:19:03,936 - openai._base_client - INFO - Retrying request to /chat/completions in 0.414670 seconds
+2025-07-15 23:19:04,684 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-07-15 23:19:04,685 - openai._base_client - INFO - Retrying request to /chat/completions in 0.804877 seconds
+2025-07-15 23:19:05,810 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-07-15 23:19:05,818 - werkzeug - INFO - 127.0.0.1 - - [15/Jul/2025 23:19:05] "[35m[1mPOST /chat HTTP/1.1[0m" 500 -
+2025-07-15 23:21:02,473 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-07-15 23:21:02,481 - openai._base_client - INFO - Retrying request to /chat/completions in 0.460165 seconds
+2025-07-15 23:21:03,226 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-07-15 23:21:03,227 - openai._base_client - INFO - Retrying request to /chat/completions in 0.827096 seconds
+2025-07-15 23:21:04,329 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-07-15 23:21:04,337 - werkzeug - INFO - 127.0.0.1 - - [15/Jul/2025 23:21:04] "[35m[1mPOST /chat HTTP/1.1[0m" 500 -
+2025-07-15 23:21:22,733 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.1.8:8000
+2025-07-15 23:21:22,734 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-15 23:21:29,054 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-07-15 23:21:29,061 - werkzeug - INFO - 127.0.0.1 - - [15/Jul/2025 23:21:29] "[35m[1mPOST /chat HTTP/1.1[0m" 500 -

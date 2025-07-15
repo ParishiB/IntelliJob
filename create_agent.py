@@ -8,7 +8,7 @@ from langchain.agents import create_openai_tools_agent, AgentExecutor
 from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_community.chat_message_histories import RedisChatMessageHistory
 from langchain.prompts import PromptTemplate
-from tools.redis_db import get_user_id
+from redis_db import get_user_id
 
 def create_agent(llm: ChatOpenAI, tools: list, system_prompt: str):
     # Each worker node will be given a name and some tools.

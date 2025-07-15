@@ -1,10 +1,11 @@
-from utils.agent_state import AgentState
+
 from langgraph.graph import END, StateGraph, START
-from agents.booking_agent import booking_node
-from agents.broker_agent import broker_node
-from agents.profile_agent import profile_node
 from agents.supervisor_agent import supervisor_agent
 from agents.default_agent import default_node
+from agents.study_agent import study_node
+from agents.job_agent import job_node
+from agents.resume_agent import resume_node
+from agent_state import AgentState
 from langgraph.checkpoint.memory import MemorySaver
 import os
 
@@ -31,19 +32,18 @@ workflow.add_edge(START, "supervisor")
 memory = MemorySaver()
 graph = workflow.compile(checkpointer=memory)
 
-graph_image = graph.get_graph(xray=True).draw_mermaid_png()
+# graph_image = graph.get_graph(xray=True).draw_mermaid_png()
 
-Define the directory and file path
-directory = "output"
-file_path = os.path.join(directory, "graph.png")
 
-Create the directory if it doesn't exist
-if not os.path.exists(directory):
-    os.makedirs(directory)
+# directory = "output"
+# file_path = os.path.join(directory, "graph.png")
 
-with open(file_path, 'wb') as file:
-    file.write(graph_image)
+# if not os.path.exists(directory):
+#     os.makedirs(directory)
 
-Export the graph variable
+# with open(file_path, 'wb') as file:
+#     file.write(graph_image)
+
+
 __all__ = ['graph']
 
